@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+  - "14.16.0"
+services:
+  - mysql
+  - redis-server
+env:
+  - PORT=3333
+  - HOST=0.0.0.0
+  - NODE_ENV=testing
+  - APP_KEY=3_7yprD0-_s1L_Wc6w81cbhcxhodx9q_
+  - SESSION_DRIVER=cookie
+  - CACHE_VIEWS=false 
+  - DB_CONNECTION=mysql
+  - MYSQL_HOST=localhost
+  - MYSQL_PORT=3306
+  - MYSQL_USER=food_sharing
+  - MYSQL_PASSWORD=food_sharing
+  - MYSQL_DB_NAME=food_sharing
+  - SESSION_DRIVER=redis
+  - REDIS_CONNECTION=local
+  - REDIS_HOST=127.0.0.1
+  - REDIS_PORT=6379
+install: 
+  - nmp i
+script:
+  - npm run full-test

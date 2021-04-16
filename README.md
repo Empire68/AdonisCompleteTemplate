@@ -1,3 +1,1 @@
-# FoodSharing
 
-Food sharing application
